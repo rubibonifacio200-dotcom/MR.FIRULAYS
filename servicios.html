@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | MR.FIRULAYS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/servicios.css">
+</head>
+<body>
+
+<header class="main-header">
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-paw logo-icon"></i>
+            <div class="logo-text">
+                <span>MR.FIRULAYS</span>
+                <p class="sub-logo">Clínica Veterinaria</p>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.php" class="nav-link-item">Inicio</a></li>
+            <li><a href="sobrenosotros.html" class="nav-link-item">Sobre nosotros</a></li>
+            <li><a href="staff.html" class="nav-link-item">Staff</a></li>
+            <li><a href="servicios.html" class="nav-link-item active">Servicios</a></li>
+            <li><a href="consejocomunidad.php" class="nav-link-item">Consejos/Comunidad</a></li>
+            <li><a href="dashboard.php" class="nav-link-item">Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="servicios-container">
+    <section class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-stethoscope"></i>
+            <h3>Consulta general</h3>
+            <p>Revisión médica completa, diagnóstico de enfermedades y control de peso.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-syringe"></i>
+            <h3>Vacunación</h3>
+            <p>Esquemas de vacunación para mascotas y refuerzos anuales.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-vial"></i>
+            <h3>Análisis clínicos</h3>
+            <p>Exámenes de sangre, pruebas de laboratorio y diagnóstico rápido.</p>
+        </div>
+        <div class="service-card">
+            
+            <i class="fas fa-plus-circle"></i>
+            <h3>Cirugías</h3>
+            <p>Esterilización, castración y cirugías básicas/especializadas.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-tooth"></i>
+            <h3>Odontología</h3>
+            <p>Limpieza dental, tratamiento de infecciones y extracciones.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-scissors"></i>
+            <h3>Estética</h3>
+            <p>Baño, corte de pelo, corte de uñas y limpieza de oídos.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-truck-medical"></i>
+            <h3>Urgencias</h3>
+            <p>Atención inmediata de emergencias y primeros auxilios veterinarios.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-paw"></i>
+            <h3>Desparasitación</h3>
+            <p>Control interno y externo con planes preventivos personalizados.</p>
+        </div>
+    </section>
+
+    <button id="btnMostrarRecomendaciones" class="btn-primary-recommend">
+<i class="fas fa-hand-holding-medical"></i> Ver Recomendación de Medicamentos y Alimentos
+    <i class="fas fa-bone"></i>
+    </button>
+
+    <section id="recomendacionesSection" class="products-section hidden-section">
+        <div class="section-header">
+            <h2>Recomendación de Medicamentos</h2>
+            <span class="warning-tag">Venta presencial únicamente</span>
+        </div>
+        
+<div class="products-grid">
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/nemex.jpg" alt="Nemex"></div>
+        <div class="product-info">
+            <h4>NEMEX-2</h4>
+            <p>Desparasitante oral para cachorros</p>
+            <span class="price">S/10.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/anxitane.jpg" alt="Anxitane"></div>
+        <div class="product-info">
+            <h4>ANXITANE</h4>
+            <p>Suplemento natural anti estrés</p>
+            <span class="price">S/30.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/moss.jpg" alt="Moss"></div>
+        <div class="product-info">
+            <h4>MOSS SPRAY</h4>
+            <p>Spray antipulgas y garrapatas</p>
+            <span class="price">S/35.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/proplan.jpg" alt="ProPlan"></div>
+        <div class="product-info">
+            <h4>PRO PLAN</h4>
+            <p>Alimento premium alta proteína</p>
+            <span class="price">S/85.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/royalcanin.jpg" alt="RoyalCanin"></div>
+        <div class="product-info">
+            <h4>ROYAL CANIN</h4>
+            <p>Nutrición especializada felina</p>
+            <span class="price">S/110.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/bravecto.jpg" alt="Bravecto"></div>
+        <div class="product-info">
+            <h4>BRAVECTO</h4>
+            <p>Tableta masticable (12 semanas protección)</p>
+            <span class="price">S/145.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/canvite.jpg" alt="Canvite"></div>
+        <div class="product-info">
+            <h4>CANVITE</h4>
+            <p>Multivitamínico para el crecimiento</p>
+            <span class="price">S/45.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/shampoo.jpg" alt="Shampoo"></div>
+        <div class="product-info">
+            <h4>DERMA-CLEAN</h4>
+            <p>Shampoo medicado para piel sensible</p>
+            <span class="price">S/28.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/dentastix.jpg" alt="Dentastix"></div>
+        <div class="product-info">
+            <h4>DENTASTIX</h4>
+            <p>Cuidado dental diario (Snack)</p>
+            <span class="price">S/15.00</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img"><img src="img/drontal.jpg" alt="Drontal"></div>
+        <div class="product-info">
+            <h4>DRONTAL PLUS</h4>
+            <p>Desparasitante interno de amplio espectro</p>
+            <span class="price">S/25.00</span>
+        </div>
+    </div>
+    <div class="product-card">
+    <div class="product-img">
+        <img src="img/collar.jpg" alt="Collar Reflectante">
+    </div>
+    <div class="product-info">
+        <h4>Collar Reflectante Neon</h4>
+        <p>Ajustable con placa de identificación</p>
+        <span class="price">S/25.00</span>
+    </div>
+</div>
+
+<div class="product-card">
+    <div class="product-img">
+        <img src="img/juguete.jpg" alt="Juguete Mordedor">
+    </div>
+    <div class="product-info">
+        <h4>Mordedor de Caucho</h4>
+        <p>Resistente y ayuda a la limpieza dental</p>
+        <span class="price">S/18.50</span>
+    </div>
+</div>
+
+</div>
+
+        <button id="btnOcultarRecomendaciones" class="btn-close-clean">
+            <i class="fas fa-times"></i> Ocultar catálogo
+        </button>
+    </section>
+</main>
+
+<script src="js/servicios.js"></script>
+</body>
+</html>

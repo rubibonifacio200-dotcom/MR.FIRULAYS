@@ -1,0 +1,403 @@
+/* ==========================================
+   1. BLOQUEO TOTAL DE BARRAS (TODOS LOS DISPOSITIVOS)
+   ========================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    
+    /* Desactiva visualmente las barras en Firefox y Edge/IE */
+    scrollbar-width: none !important; 
+    -ms-overflow-style: none !important; 
+}
+
+/* Oculta la barra en Chrome, Safari, Opera y Navegadores Móviles (iOS / Android) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+}
+
+/* Aplicar box-sizing a absolutamente todo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Evitar desbordamiento lateral */
+body {
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   2. NAVBAR
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 3% 25px 2%; 
+    border-bottom: 3.5px solid #003366; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 42px; 
+    color: #003366;
+}
+
+.logo-text span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 32px; 
+    color: #003366;
+    line-height: 1;
+}
+
+.sub-logo {
+    font-size: 16px; 
+    color: #0057C2;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0057C2;
+    transform: scale(1.1);
+}
+
+.btn-login {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #0057C2;
+}
+
+
+/* ==========================================
+   3. HERO SECTION
+   ========================================== */
+.hero-wrapper {
+    width: 100%;
+    min-height: 88vh; 
+    display: flex;
+    align-items: center;
+    padding: 40px 5% 40px 8%;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 58px; 
+    color: #333;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.clinic-text {
+    color: #003366;
+    font-weight: 700;
+}
+
+.brand-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #0057C2;
+    font-size: 78px; 
+}
+
+.paw-light {
+    color: #A5CFFF; 
+    font-size: 55px;
+    margin-left: 15px;
+}
+
+.hero-p {
+    font-size: 26px; 
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 55px;
+}
+
+.info-pill-blue {
+    width: 350px; 
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    cursor: default; 
+    user-select: none; 
+}
+
+.btn-secondary {
+    width: 350px;
+    background: white;
+    color: #0057C2;
+    border: 1.5px solid #ddd;
+    padding: 20px 25px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.btn-secondary:hover {
+    border-color: #0057C2;
+}
+
+.features-pill {
+    display: inline-flex;
+    background-color: #F0F7FF;
+    padding: 25px 50px;
+    border-radius: 100px;
+    gap: 60px;
+}
+
+.f-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.f-item i { color: #003366; font-size: 26px; }
+.f-text strong { font-size: 18px; color: #003366; display: block; }
+.f-text span { font-size: 14px; color: #0057C2; }
+
+.hero-image {
+    flex: 1.3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 115%;
+    max-width: 850px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   4. MODAL / LOGIN
+   ========================================== */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    animation: slideDown 0.4s ease; 
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db; 
+    border-radius: 12px; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #003366; 
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 15px;
+    color: #9ca3af; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.toggle-icon:hover {
+    color: #003366;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.subtitle { color: #666; font-size: 14px; margin-bottom: 30px; }
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.forgot-password { display: block; text-align: center; font-size: 12px; color: #0057C2; text-decoration: none; margin: 15px 0; font-weight: 600; }
+.btn-submit { width: 100%; background-color: #003366; color: white; padding: 14px; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
+.divider { text-align: center; border-bottom: 1px solid #eee; line-height: 0.1em; margin: 25px 0; }
+.divider span { background: #fff; padding: 0 10px; color: #999; font-size: 12px; }
+.btn-google { width: 100%; background: white; border: 1px solid #e0e0e0; padding: 12px; border-radius: 10px; display: flex; justify-content: center; align-items: center; gap: 10px; font-weight: 600; cursor: pointer; }
+.btn-google img { width: 20px; }
+
+.input-group label i {
+    margin-right: 8px; 
+    color: #003366;    
+    width: 20px;       
+    text-align: center;
+}
+
+.bottom-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.bottom-text a {
+    color: #0057C2;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.main-footer {
+    background-color: #f8fbfd; 
+    padding: 40px 20px;
+    border-top: 2px solid #eef2f6;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.footer-label {
+    font-weight: 600;
+    color: #0b284e; 
+    font-size: 16px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 20px; 
+}
+
+.footer-social-icons a, .footer-link {
+    text-decoration: none;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    transition: color 0.3s ease;
+}
+
+
+
+@media (max-width: 900px) {
+    .hero { flex-direction: column; text-align: center; }
+    .hero-image { justify-content: center; margin-top: 50px; }
+    .hero-buttons { align-items: center; }
+    .nav-right { gap: 20px; }
+    .nav-links { display: none; } 
+}
